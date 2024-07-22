@@ -7,10 +7,10 @@ for i in numbers:
         if i % j == 0:
             is_prime = False
             break
-    if is_prime:
+    if is_prime and i != 1:
         primes.append(i)
     else:
-        not_primes.append(i)
-primes.remove(1)
+        if i != 1:
+            not_primes.append(i)
 print(primes)
 print(not_primes)
